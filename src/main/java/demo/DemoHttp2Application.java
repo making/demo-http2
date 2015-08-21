@@ -13,22 +13,20 @@ import io.undertow.UndertowOptions;
 @RestController
 public class DemoHttp2Application {
 
-    @Bean
-    public UndertowEmbeddedServletContainerFactory embeddedServletContainerFactory() {
-        final UndertowEmbeddedServletContainerFactory undertowEmbeddedServletContainerFactory = new UndertowEmbeddedServletContainerFactory();
-        undertowEmbeddedServletContainerFactory
-                .addBuilderCustomizers(builder -> {
-                    builder.setServerOption(UndertowOptions.ENABLE_HTTP2, true);
-                });
-        return undertowEmbeddedServletContainerFactory;
-    }
+	@Bean
+	UndertowEmbeddedServletContainerFactory embeddedServletContainerFactory() {
+		UndertowEmbeddedServletContainerFactory factory = new UndertowEmbeddedServletContainerFactory();
+		factory.addBuilderCustomizers(
+				builder -> builder.setServerOption(UndertowOptions.ENABLE_HTTP2, true));
+		return factory;
+	}
 
-    @RequestMapping
-    String hello() {
-        return "hello!";
-    }
+	@RequestMapping
+	String hello() {
+		return "hello!";
+	}
 
-    public static void main(String[] args) {
-        SpringApplication.run(DemoHttp2Application.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(DemoHttp2Application.class, args);
+	}
 }
