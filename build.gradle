@@ -1,6 +1,10 @@
-apply plugin: 'java'
-apply plugin: 'maven'
-apply plugin: 'application'
+plugins {
+  id 'java'
+  id 'application'
+  id 'eclipse'
+  id 'idea'
+  id 'com.github.johnrengelman.shadow' version '1.2.2'
+}
 
 group = 'org.test'
 version = '0.0.1-SNAPSHOT'
@@ -27,8 +31,7 @@ dependencies {
     testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.3.0.RELEASE') {
         exclude(module: 'commons-logging')
     }
-    // make sure we use the latest alpn-boot
-    jvmBoot 'org.mortbay.jetty.alpn:alpn-boot:8.1.+'
+    jvmBoot 'org.mortbay.jetty.alpn:alpn-boot:8.1.6.v20151105'
 }
 
 defaultTasks 'run'
@@ -41,6 +44,18 @@ distributions {
             into "lib"
         }
     }
+}
+
+task copyAlpnBootJar (type:Copy) {
+    from (configurations.jvmBoot)
+    into("lib")
+}
+
+tasks["eclipse"].dependsOn(copyAlpnBootJar)
+processResources.dependsOn copyAlpnBootJar
+
+clean {
+    delete "lib/*.jar"
 }
 
 startScripts {

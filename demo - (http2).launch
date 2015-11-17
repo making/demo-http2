@@ -8,7 +8,7 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="demo.DemoHttp2Application"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="demo"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Djava.security.egd=file:/dev/./urandom -Xbootclasspath/p:alpn-boot-8.1.6.v20151105.jar"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Djava.security.egd=file:/dev/./urandom -Xbootclasspath/p:./lib/alpn-boot-8.1.6.v20151105.jar"/>
 <stringAttribute key="process_factory_id" value="org.springframework.ide.eclipse.boot.launch.process.BootProcessFactory"/>
 <booleanAttribute key="spring.boot.debug.enable" value="false"/>
 <booleanAttribute key="spring.boot.lifecycle.enable" value="true"/>

@@ -1,6 +1,14 @@
 # HTTP2 w/ Spring Boot + Undertow (Stripped-down footprint)
 
+## Running from gradle
+
     $ ./gradlew run
+
+## Creating and running uber-jar
+
+    $ ./gradlew shadowJar
+    $ java -Xbootclasspath/p:./alpn-boot-8.1.6.v20151105.jar -jar build/libs/demo-0.0.1-SNAPSHOT-all.jar
+
 
 Go [https://localhost:8443](https://localhost:8443)
 
