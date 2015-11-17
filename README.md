@@ -1,4 +1,4 @@
-# HTTP2 w/ Spring Boot + Undertow
+# HTTP2 w/ Spring Boot + Undertow (Stripped-down footprint)
 
     $ ./gradlew run
 
