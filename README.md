@@ -6,8 +6,8 @@
 
 ## Creating and running uber-jar
 
-    $ ./gradlew shadowJar
-    $ java -Xbootclasspath/p:./lib/alpn-boot-8.1.6.v20151105.jar -jar build/libs/demo-0.0.1-SNAPSHOT-all.jar
+    $ ./gradlew build
+    $ java -Xbootclasspath/p:./lib/alpn-boot-8.1.6.v20151105.jar -jar build/libs/demo-0.0.1-SNAPSHOT.jar
 
 
 Go [https://localhost:8443](https://localhost:8443)
