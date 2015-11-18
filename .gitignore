@@ -1,3 +1,10 @@
 .idea
 target
 *.iml
+build/
+.gradle/
+.project
+.classpath
+.settings/
+bin/
+lib/*.jar

@@ -1,7 +1,14 @@
-# HTTP2 w/ Spring Boot + Undertow
+# HTTP2 w/ Spring Boot + Undertow (Stripped-down footprint)
 
-    $ mvn clean package -Dmaven.test.skip=true
-    $ java -Xbootclasspath/p:./alpn-boot-8.1.3.v20150130.jar -jar target/demo-0.0.1-SNAPSHOT.jar
+## Running from gradle
+
+    $ ./gradlew run
+
+## Creating and running uber-jar
+
+    $ ./gradlew build
+    $ java -Xbootclasspath/p:./lib/alpn-boot-8.1.6.v20151105.jar -jar build/libs/demo-0.0.1-SNAPSHOT.jar
+
 
 Go [https://localhost:8443](https://localhost:8443)
 
