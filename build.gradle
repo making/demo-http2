@@ -42,7 +42,9 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter')
     compile('org.springframework:spring-webmvc')
-    compile 'org.springframework.boot:spring-boot-starter-undertow'
+    compile ('org.springframework.boot:spring-boot-starter-undertow') {
+        exclude(module: 'undertow-websockets-jsr')
+    }
     testCompile('org.springframework.boot:spring-boot-starter-test') {
         exclude(module: 'commons-logging')
     }
