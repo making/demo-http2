@@ -59,3 +59,4 @@ Go [https://localhost:8443](https://localhost:8443)
 
 * http://undertow.io/blog/2015/03/26/HTTP2-In-Wildfly.html
 * https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-undertow-ssl
+* [Jetty version](https://github.com/otrosien/demo-http2)
